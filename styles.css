@@ -5,10 +5,13 @@
 
 :root {
     --parent-margin: 15px 15px 40px;
+    --icon-margin: 25px;
+
 }
 
 html, body {
     height: 100vh;
+    font-family: sans-serif;
 }
 
 body {
@@ -45,8 +48,22 @@ body {
     list-style: none;
 }
 
-.sidebar ul li {
+.sidebar ul li{
     margin-bottom: 10px;
+    font-size: 1.25rem;
+    line-height: 1.25rem;
+    display: flex;
+    align-items: center;
+}
+
+.logo p {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+}
+
+.material-icons {
+    margin-right: var(--icon-margin);
 }
 
 .main {
