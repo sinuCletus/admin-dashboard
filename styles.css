@@ -14,8 +14,8 @@ body {
 .container {
     height: 100vh;
     display: grid;
-    grid-template-columns: 2fr 6fr;
-    grid-template-rows: 2fr 6fr;
+    grid-template-columns: 1.75fr 6fr;
+    grid-template-rows: 1.5fr 6fr;
 }
 
 .header {
