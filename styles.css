@@ -4,13 +4,13 @@
 }
 
 :root {
-    --parent-margin: 15px 15px 40px;
+    --parent-margin: 15px;
     --icon-margin: 25px;
 
 }
 
 html, body {
-    height: 100vh;
+    height: 100%;
     font-family: sans-serif;
 }
 
@@ -19,7 +19,7 @@ body {
 }
 
 .container {
-    height: 100vh;
+    height: 100%;
     display: grid;
     grid-template-columns: 1.75fr 6fr;
     grid-template-rows: 1.5fr 6fr;
@@ -30,10 +30,42 @@ body {
     grid-area: 1 / 2 / 2 / 3;
     display: grid;
     grid-template-rows: 1fr 1fr;
-    grid-template-columns: 3fr 1fr;
+    grid-template-columns: 2fr 1.5fr;
 }
 
+.avatar {
+    max-width: 2.5rem;
+    max-height: 2.5rem;
+    border-radius: 50%;
+    width: auto;
+    height: auto;
+}
 
+.header > div {
+    display: flex;
+    margin: var(--parent-margin);
+    align-items: center;
+}
+
+.header .notifications > *, .header .user-info .greeting {
+    padding: 0px 10px;
+}
+
+.header .buttons button {
+    padding: 10px 12px;
+    font-weight: 800;
+    border: none;
+    border-radius: 15px;
+    margin-right: 15px;
+}
+
+.search input {
+    width: 80%;
+}
+
+.search i {
+    font-size: 1.5rem;
+}
 
 .sidebar {
     background-color: darkseagreen;
@@ -47,6 +79,7 @@ body {
 .sidebar .logo {
     height: 40px;
     background-color: red;
+    margin-bottom: 20px;
 }
 
 .sidebar ul {
@@ -72,7 +105,7 @@ li a {
     font-size: 1.5rem;
 }
 
-.material-icons {
+li .material-icons {
     margin-right: var(--icon-margin);
 }
 
