@@ -28,7 +28,12 @@ body {
 .header {
     background-color: darkgoldenrod;
     grid-area: 1 / 2 / 2 / 3;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 3fr 1fr;
 }
+
+
 
 .sidebar {
     background-color: darkseagreen;
@@ -46,6 +51,11 @@ body {
 
 .sidebar ul {
     list-style: none;
+}
+
+li a {
+    text-decoration: none;
+    color: black;
 }
 
 .sidebar ul li{
