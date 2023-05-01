@@ -6,6 +6,10 @@
 :root {
     --parent-margin: 15px;
     --icon-margin: 25px;
+    --primary-clr: white;
+    --secondary-clr: rgb(62, 203, 128);
+    --tertiary-clr: darkgreen;
+    --background-clr: rgb(183, 183, 183);
 
 }
 
@@ -14,19 +18,15 @@ html, body {
     font-family: sans-serif;
 }
 
-body {
-    background-color: aliceblue;
-}
-
 .container {
     height: 100%;
     display: grid;
-    grid-template-columns: 1.75fr 6fr;
+    grid-template-columns: 1.5fr 6fr;
     grid-template-rows: 1.5fr 6fr;
 }
 
 .header {
-    background-color: darkgoldenrod;
+    background-color: var(--primary-clr);
     grid-area: 1 / 2 / 2 / 3;
     display: grid;
     grid-template-rows: 1fr 1fr;
@@ -57,6 +57,7 @@ body {
     border: none;
     border-radius: 15px;
     margin-right: 15px;
+    background-color: var(--secondary-clr);
 }
 
 .search input {
@@ -68,7 +69,7 @@ body {
 }
 
 .sidebar {
-    background-color: darkseagreen;
+    background-color: var(--secondary-clr);
     grid-area: 1 / 1 / 3 / 2;
 }
 
@@ -78,8 +79,11 @@ body {
 
 .sidebar .logo {
     height: 40px;
-    background-color: red;
     margin-bottom: 20px;
+}
+
+.sidebar .logo i {
+    margin-right: 15px;
 }
 
 .sidebar ul {
@@ -99,6 +103,10 @@ li a {
     align-items: center;
 }
 
+.sidebar .subnav {
+    margin-top: 80px;
+}
+
 .logo p {
     display: flex;
     align-items: center;
@@ -110,7 +118,71 @@ li .material-icons {
 }
 
 .main {
-    background-color: royalblue;
+    background-color: var(--background-clr);
     grid-area: 2 / 2 / 3 / 3;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 2fr 1fr;
+}
 
+.main > * {
+    margin: var(--parent-margin);
+}
+
+.projects {
+    grid-area: 1 / 1 / 3 / 2;
+    background-color: var(--background-clr);
+    padding: 10px;
+}
+
+.project-display {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 15px;
+}
+
+.project {
+    border-left: 5px solid var(--tertiary-clr);
+    padding: 10px;
+    background-color: var(--primary-clr);
+}
+
+.project div {
+    display: flex;
+    justify-content: end;
+}
+
+.project div i {
+    padding: 5px;
+}
+
+.anouncements {
+    background-color: var(--primary-clr);
+    grid-area: 1 / 2 / 2 / 3;
+    padding: 10px;
+}
+
+.anouncements > h4, .anouncements p {
+    padding: 10px;
+}
+
+.trending {
+    background-color: var(--primary-clr);
+    grid-area: 2 / 2 / 3 / 3;
+    padding: 10px;
+}
+
+.trends {
+    display: flex;
+    padding: 10px;
+    align-items: center;
+}
+
+.trends div {
+    margin-left: 15px;
+}
+
+.trends i {
+    border-radius: 50%;
 }
